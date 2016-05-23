@@ -480,6 +480,26 @@ var sMegaman = function(sx, sy){
     //left leg    
     line(sx, sy, sx+8, sy);
 };
+var frames = function(){
+        background(246, 250, 187);
+        backArrow();
+        jMegaman(50, 50);
+        rf1Megaman(100, 50);
+        rf2Megaman(170, 50);
+        rf3Megaman(230, 50);
+        srMegaman(45, 100);
+        sMegaman(120, 100);
+        hMet(45, 150);
+        
+        fill(0, 0, 0);
+        textFont(normal,10);
+        text("Jumping   Run frame 1  Run frame 2  Run frame 3", 32, 65);
+        text("Standing Forwad   Shoot standing", 15, 114);
+        text("MET", 42, 170);
+};
+var draw = function(){
+    frames();
+};
             };
           }
           if (typeof draw !== 'undefined') processing.draw = draw;
