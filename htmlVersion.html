@@ -480,6 +480,55 @@ var sMegaman = function(sx, sy){
     //left leg    
     line(sx, sy, sx+8, sy);
 };
+var hMet = function(mx, my){
+//all copper pixels
+    noStroke();
+    fill(210, 140, 20);
+    rect(mx+4, my-8, 10, 8);
+    rect(mx+2, my-4, 14, 3);
+    stroke(210, 140, 20);
+    line(mx+1, my-1, mx+17, my-1);
+    line(mx+5, my-9, mx+11, my-9);
+    line(mx+14, my-7, mx+14, my-4);
+    line(mx+3, my-7, mx+3, my-4);
+    point(mx+2, my-5);
+    point(mx+15, my-5);
+    
+//all black pixels
+    stroke(0, 0, 0);
+    fill(0, 0, 0);
+    
+    //Outline
+    line(mx, my, mx+17, my);
+    point(mx, my-1);
+    point(mx+17, my-1);
+    line(mx+1, my-2, mx+1, my-5);
+    line(mx+16, my-2, mx+16, my-5);
+    line(mx+2, my-6, mx+2, my-7);
+    line(mx+15, my-6, mx+15, my-7);
+    point(mx+3, my-8);
+    point(mx+14, my-8);
+    line(mx+4, my-9, mx+5, my-9);
+    line(mx+13, my-9, mx+12, my-9);
+    line(mx+6, my-10, mx+11, my-10);
+    
+    //Cross
+    line(mx+2, my-4, mx+16, my-4);
+    line(mx+6, my-5, mx+6, my-3);
+    
+    //I lied
+    stroke(210, 140, 20);
+    point(mx+4, my-4);
+    point(mx+8, my-4);
+    
+
+//all white pixels
+    stroke(255, 255, 255);
+    line(mx+5, my-8, mx+7, my-8);
+    line(mx+4, my-7, mx+6, my-7);
+    line(mx+4, my-6, mx+5, my-6);
+    
+};
 var frames = function(){
         background(246, 250, 187);
         backArrow();
